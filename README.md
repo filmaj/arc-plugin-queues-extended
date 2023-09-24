@@ -2,7 +2,7 @@
 
 Add an [SQS queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html)
 to your arc.codes project, while exposing more of SQS' configurations than the default architect
-[`@queues](https://arc.codes/docs/en/reference/project-manifest/queues).
+[`@queues`](https://arc.codes/docs/en/reference/project-manifest/queues).
 
 ## Features
 
@@ -13,6 +13,7 @@ to your arc.codes project, while exposing more of SQS' configurations than the d
 ## Configuration
 
 Install this plugin as per the [arc.codes docs](https://arc.codes/docs/en/guides/plugins/overview#finding-%26-installing-plugins).
+It is available on npm: [arc-plugin-queues-extended](https://www.npmjs.com/package/arc-plugin-queues-extended).
 
 Then, add a `@queues-extended` section to your `app.arc` file. Each entry under this section will create a new queue.
 
