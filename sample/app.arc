@@ -13,6 +13,8 @@ architecture arm64
 queue2
   timeout 200
   polling 20
+  dlq overflow
+overflow
 
 @plugins
 queues-extended

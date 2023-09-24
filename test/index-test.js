@@ -43,16 +43,31 @@ describe('@queues-extended plugin', () => {
       });
 
       describe('queue configurations', () => {
+
+        describe('dead letter queue', () => {
+
+          it('should allow specifying CloudFormation DependsOn via `dlq`', () => {
+            const cfn = { ...baseCfn };
+            const out = start({ arc: { 'queues-extended': [
+              { q: { dlq: 'overflow' } },
+              'overflow'
+            ] }, cloudformation: cfn, stage: 'test' });
+            expect(out.Resources.qtest.DependsOn).toEqual('overflowtest');
+          });
+        });
+
         it('should allow specifying MessageRetentionPeriod via `retention`', () => {
           const cfn = { ...baseCfn };
           const out = start({ arc: { 'queues-extended': [ { q: { retention: 420 } } ] }, cloudformation: cfn, stage: 'test' });
           expect(out.Resources.qtest.Properties.MessageRetentionPeriod).toEqual(420);
         });
+
         it('should allow specifying ReceiveMessageWaitTimeSeconds via `polling`', () => {
           const cfn = { ...baseCfn };
           const out = start({ arc: { 'queues-extended': [ { q: { polling: 4 } } ] }, cloudformation: cfn, stage: 'test' });
           expect(out.Resources.qtest.Properties.ReceiveMessageWaitTimeSeconds).toEqual(4);
         });
+
         it('should allow specifying VisibilityTimeout via `timeout`', () => {
           const cfn = { ...baseCfn };
           const out = start({ arc: { 'queues-extended': [ { q: { timeout: 420 } } ] }, cloudformation: cfn, stage: 'test' });
