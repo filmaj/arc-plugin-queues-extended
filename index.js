@@ -68,7 +68,7 @@ module.exports = {
 
 // https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html
 function createCloudformationDefinitions (q) {
-  console.log(JSON.stringify(q, null, 2));
+  // console.log(JSON.stringify(q, null, 2));
   // All default values below are taken from the above CloudFormation SQS reference doc.
   const queueCfn = {
     Type: 'AWS::SQS::Queue',
