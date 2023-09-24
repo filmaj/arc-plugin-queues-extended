@@ -22,7 +22,7 @@ module.exports = {
         }
       });
       for (const q of arc['queues-extended']) {
-        let qLogicalId, dlqLogicalId, opts = {};
+        let qLogicalId, opts = {};
         switch (typeof q) {
         case 'string':
           qLogicalId = q;

@@ -4,7 +4,7 @@
   "description": "Architect (arc.codes) serverless framework plugin that creates SQS-based queues and exposes more SQS options above the default architect queue implementation",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint",
+    "lint": "eslint index.js",
     "test:unit": "jasmine --config=test/jasmine.json",
     "test": "npm run lint && npm run test:unit"
   },
