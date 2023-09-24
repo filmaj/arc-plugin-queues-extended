@@ -1,5 +1,5 @@
 {
-  "name": "arc-plugin-queue-extended",
+  "name": "arc-plugin-queues-extended",
   "version": "0.0.1",
   "description": "Architect (arc.codes) serverless framework plugin that creates SQS-based queues and exposes more SQS options above the default architect queue implementation",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/filmaj/arc-plugin-queue-extended.git"
+    "url": "git+https://github.com/filmaj/arc-plugin-queues-extended.git"
   },
   "keywords": [
     "serverless",
@@ -22,9 +22,9 @@
   "author": "Filip Maj",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/filmaj/arc-plugin-queue-extended/issues"
+    "url": "https://github.com/filmaj/arc-plugin-queues-extended/issues"
   },
-  "homepage": "https://github.com/filmaj/arc-plugin-queue-extended",
+  "homepage": "https://github.com/filmaj/arc-plugin-queues-extended",
   "devDependencies": {
     "@architect/eslint-config": "^2.0.0",
     "eslint": "^8.0.0",
