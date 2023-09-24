@@ -51,6 +51,7 @@ module.exports = {
         */
         // TODO: should we put anything into cloudformation.Outputs?
       }
+      logger.status(`Included ${queues.length} queue(s) in stack.`);
       return cloudformation;
     }
   }
