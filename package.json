@@ -1,6 +1,6 @@
 {
   "name": "arc-plugin-queues-extended",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Architect (arc.codes) serverless framework plugin that creates SQS-based queues and exposes more SQS options above the default architect queue implementation",
   "main": "index.js",
   "scripts": {
